@@ -18,3 +18,7 @@ nav.qdn {
     padding: 10px;
     text-align:  center;
 }
+
+div#queued_button_number_wrapper > div > input {
+    padding: 25px;
+}

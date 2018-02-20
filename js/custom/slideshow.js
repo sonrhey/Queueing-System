@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	var counter = 0;
 	function getImages(){
 		$.ajax({
 			type: "get",
@@ -7,13 +7,22 @@ $(document).ready(function(){
 		}).done(function(response){
 			var obj = $.parseJSON(response);
 			var count = obj.length;
-			var rand = function() {
-		    return Math.floor(Math.random()*count);
-			};
-
+			$("#main-product-image").fadeOut().fadeIn().attr("src", obj[0].img_path);
 			setInterval(function(){
-					var imgurl = obj[rand()].img_path;
-					$("#main-product-image").fadeOut().fadeIn().attr("src", imgurl);
+					counter++;	
+					if(counter < count)
+					{	
+						var imgurl = obj[counter].img_path;
+						// $("#main-product-image").fadeOut().fadeIn().attr("src", imgurl);
+
+						$("#main-product-image").fadeOut(500, function() {
+				        $("#main-product-image").attr("src",imgurl);
+				    }).fadeIn(500);
+					}
+					else
+					{
+						counter = 0;
+					}
 			},5000);
 
 		});

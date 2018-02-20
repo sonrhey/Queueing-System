@@ -2,12 +2,13 @@
 require_once "dbconfig.php";
 
 $result = [];
-$getNumbers = "SELECT queued_number FROM queued_numbers WHERE status = 0 ORDER BY dateTime DESC LIMIT 5";
+$getNumbers = "SELECT quee as queued_number FROM queeuing WHERE served = 0 ORDER BY ord_num ASC";
 $getNumbers = $conn->query($getNumbers);
 
-
-while($row = mysqli_fetch_assoc($getNumbers)){
-$result[] = $row;
+if($getNumbers->num_rows>0){
+	while($row = mysqli_fetch_assoc($getNumbers)){
+	$result[] = $row;
+	}
+	echo json_encode($result);
 }
 
-echo json_encode($result);

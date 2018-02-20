@@ -11,5 +11,7 @@ $dateTime = date("Y-m-d H:i:s", strtotime('+8 hours'));
 	if(!$save2Display){
 	echo mysqli_error($conn);
 	}else{
+		$update = "UPDATE queeuing SET served = 1 WHERE quee = '$buttonVal'";
+		$update = $conn->query($update);
 		echo 0;
 	}

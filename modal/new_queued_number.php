@@ -1,4 +1,5 @@
-<div data-backdrop="static" class="modal fade" id="myModal5" role="dialog" style="overflow: hidden;">
+<div class="wrapper">
+<div class="modal fade" id="myModal5" role="dialog" style="overflow: hidden;">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,6 +9,9 @@
         <h1 class="number-wrapper"></h1>
       </div>
     </div>
-    <audio src="sound/new_que.mp3" id="audio"></audio>
   </div>
 </div>
+</div>
+
+
+    <audio src="sound/new_que.mp3" id="audio"></audio>
