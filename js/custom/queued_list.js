@@ -43,14 +43,16 @@ function showModal(qn_number, id){
 	if(idArray.indexOf(id) == -1){
 		idArray.push(id);
 		$audio.get(0).play();
-			var voices = synth.getVoices();
-			utterance = new SpeechSynthesisUtterance('Now Serving, "' + qn_number);
-			utterance.voice = voices[2];
-		 	synth.speak(utterance);
-			$("#myModal5").modal("show");
-			$(".number-wrapper").text(qn_number);
-			setTimeout(function() {
-				$("#myModal5").modal("hide");
+			setTimeout(function(){
+				var voices = synth.getVoices();
+				utterance = new SpeechSynthesisUtterance('Now Serving, "' + qn_number);
+				utterance.voice = voices[2];
+			 	synth.speak(utterance);
+				$("#myModal5").modal("show");
+				$(".number-wrapper").text(qn_number);
+				setTimeout(function() {
+					$("#myModal5").modal("hide");
+				}, 3000);
 			}, 3000);
 	}
 }
