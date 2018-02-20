@@ -7,7 +7,7 @@
 			<div class="main-body">
 				<div class="main-image">
 					<div class="main-image-slide">
-						<img src="img/noimage.png" class="main-image-size" id="main-product-image">
+						<img src="img/noimage.png" class="main-image-size" id="main-product-image" style="border: 0; box-shadow: none;">
 					</div>
 					<!--div class="sub-image-wrapper">
 						<img src="img/food2.jpg" class="sub-images">
