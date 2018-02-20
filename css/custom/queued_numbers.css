@@ -1,0 +1,20 @@
+body{
+	background: #0d2f46;
+}
+
+div#queued_button_number_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+nav.qdn {
+    color: white;
+    background: #165f90;
+    padding: 10px;
+    text-align:  center;
+}
